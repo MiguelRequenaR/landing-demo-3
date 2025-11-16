@@ -43,7 +43,7 @@ export default function NavBar() {
             </ul>
           </nav>
           <button
-            className="relative overflow-hidden bg-transparent px-6 py-2 uppercase cursor-pointer border border-primary group transition-colors duration-500 hover:text-white text-sm font-semibold"
+            className="relative overflow-hidden bg-transparent px-6 py-2 uppercase cursor-pointer border border-primary group transition-colors rounded-full duration-500 hover:text-white text-sm text-primary"
           >
             <span
               className="
@@ -57,7 +57,7 @@ export default function NavBar() {
             <span 
               className="relative z-10 transition-colors duration-500"
             >
-              <h3>Contáctanos</h3>
+              Contáctanos
             </span>
           </button>
         </div>
@@ -112,7 +112,7 @@ export default function NavBar() {
         </nav>
         <div className="flex justify-center pb-8">
           <button
-            className="relative overflow-hidden bg-secondary px-8 py-3 uppercase cursor-pointer border border-secondary group transition-colors duration-500 hover:text-white text-base"
+            className="relative overflow-hidden bg-secondary px-8 py-3 uppercase cursor-pointer border border-secondary group transition-colors duration-500 hover:text-white text-base rounded-full text-primary"
             onClick={() => setMenuOpen(false)}
           >
             <span
@@ -127,7 +127,7 @@ export default function NavBar() {
             <span
               className="relative z-10 transition-colors duration-500"
             >
-              <h3>Contáctanos</h3>
+              Contáctanos
             </span>
           </button>
         </div>

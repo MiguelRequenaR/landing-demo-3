@@ -1,6 +1,21 @@
 import { ArrowDown } from "lucide-react"
 
 export default function HeroHome() {
+
+  const handleExploreClick = () => {
+    if (window.__lenis) {
+      window.__lenis.scrollTo(window.scrollY + window.innerHeight * 0.8, {
+        duration: 1.5,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      });
+    } else {
+      window.scrollBy({
+        top: window.innerHeight * 0.8,
+        behavior: 'smooth',
+      })
+    }
+  };
+
   return (
     <main className="h-screen flex flex-col">
       <div
@@ -17,7 +32,9 @@ export default function HeroHome() {
         </div>
         <div className="md:w-1/3 group pt-5 md:pt-50" data-aos="fade-up">
           <button
-            className="uppercase flex items-center gap-2 text-sm md:text-[20px] text-primary border border-primary rounded-full px-10 py-3 md:py-5 hover:bg-primary hover:text-white transition-all duration-700 ease-in-out cursor-pointer">
+            className="uppercase flex items-center gap-2 text-sm md:text-[20px] text-primary border border-primary rounded-full px-10 py-3 md:py-5 hover:bg-primary hover:text-white transition-all duration-700 ease-in-out cursor-pointer"
+            onClick={handleExploreClick}
+          >
             Explorar más
             <ArrowDown className="w-7 h-7 group-hover:translate-y-1 transition-all duration-700 ease-in-out" />
           </button>
