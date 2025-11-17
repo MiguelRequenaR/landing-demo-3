@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 
 export default function Fotter() {
@@ -29,23 +30,29 @@ export default function Fotter() {
           className="text-white text-2xl text-center md:text-left">Desarrollado por <a href="https://grobles.netlify.app" target="_blank" rel="noopener noreferrer" className="text-black hover:underline">Grobles Studio.</a></h2>
         </div>
         <div
-        className="space-y-10" data-aos="fade-up">
+        className="flex flex-col gap-10" data-aos="fade-up">
+          <Link to="/">
             <div
             className="bg-[#3f5142] text-white uppercase text-4xl flex justify-between items-center px-10 py-5 rounded-full cursor-pointer hover:bg-white hover:text-primary transition-all duration-700 ease-in-out"
             >
-              <h4 className="text-3xl">Inicio</h4>
+              <h4 className="text-xl md:text-3xl">Inicio</h4>
               <ArrowRight className="w-5 h-5" />
             </div>
+          </Link>
+          <Link to="/habitaciones">
             <div className="bg-[#3f5142] text-white uppercase text-4xl flex justify-between items-center px-10 py-5 rounded-full cursor-pointer hover:bg-white hover:text-primary transition-all duration-700 ease-in-out"
             >
-              <h4 className="text-3xl">Habitaciones</h4>
+              <h4 className="text-xl md:text-3xl">Habitaciones</h4>
               <ArrowRight className="w-5 h-5" />
             </div>
+          </Link>
+          <Link to="/contacto">
             <div className="bg-[#3f5142] text-white uppercase text-4xl flex justify-between items-center px-10 py-5 rounded-full cursor-pointer hover:bg-white hover:text-primary transition-all duration-700 ease-in-out"
             >
-              <h4 className="text-3xl">Contacto</h4>
+              <h4 className="text-xl md:text-3xl">Contacto</h4>
               <ArrowRight className="w-5 h-5" />
             </div>
+          </Link>
         </div>
       </div>
     </main>

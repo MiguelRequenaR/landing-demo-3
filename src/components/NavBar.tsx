@@ -21,26 +21,30 @@ export default function NavBar() {
     <header className="bg-white fixed top-0 left-0 right-0 w-full z-50">
       <div className="max-w-7xl mx-auto flex justify-between items-center py-5 px-4 md:px-0">
         <div>
-          <h1
-            className="text-2xl font-extralight">Oz Resort</h1>
+          <a href="/" 
+          className="flex items-center gap-2">
+            <img src="/logoOZP.png" alt="logo" className="w-10 h-10" />
+            <h1
+              className="text-2xl font-extralight text-primary">Oz Resort</h1>
+          </a>
         </div>
 
         <div className="hidden md:flex items-center gap-12">
           <nav>
             <ul className="text-gray-600 flex gap-20 font-semibold">
               {links.map((link) => (
-                 <li key={link.href}>
-                 <Link
-                   to={link.href}
-                   className={`
+                <li key={link.href}>
+                  <Link
+                    to={link.href}
+                    className={`
                      transition-colors duration-500 cursor-pointer
                      hover:underline underline-offset-8 decoration-primary font-light
                      ${location.pathname === link.href ? 'text-primary font-light' : ''}
                    `}
-                 >
-                   {link.label}
-                 </Link>
-               </li>
+                  >
+                    {link.label}
+                  </Link>
+                </li>
               ))}
             </ul>
           </nav>
@@ -57,7 +61,7 @@ export default function NavBar() {
                   transition-transform duration-500 ease-in-out pointer-events-none
                 "
               />
-              <span 
+              <span
                 className="relative z-10 transition-colors duration-500"
               >
                 Contáctanos
@@ -98,18 +102,18 @@ export default function NavBar() {
           <ul className="flex flex-col gap-8 text-white text-2xl font-extralight">
             {links.map((link) => (
               <li key={link.href}>
-              <Link
-                to={link.href}
-                className={`
+                <Link
+                  to={link.href}
+                  className={`
                   cursor-pointer transition-colors duration-300
                   hover:text-secondary 
                   ${location.pathname === link.href ? 'text-secondary' : ''}
                 `}
-                onClick={() => setMenuOpen(false)}
-              >
-                {link.label}
-              </Link>
-            </li>
+                  onClick={() => setMenuOpen(false)}
+                >
+                  {link.label}
+                </Link>
+              </li>
             ))}
           </ul>
         </nav>
