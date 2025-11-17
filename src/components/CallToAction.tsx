@@ -1,4 +1,5 @@
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function CallToAction() {
   return (
@@ -15,11 +16,11 @@ export default function CallToAction() {
           Encuentra a tus citas perfectas y escapa al paraíso.
         </p>
         <div data-aos="fade-up" data-aos-delay="200">
-          <button
+          <Link to="/contacto"
           className="uppercase flex items-center gap-2 text-sm md:text-[20px] text-primary border border-primary rounded-full px-10 py-5 hover:px-15 hover:bg-primary hover:text-white transition-all duration-700 ease-in-out cursor-pointer group mx-4 md:mx-0">
             ¡Compruebe la disponibilidad de hoy!
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-all duration-700 ease-in-out" />
-          </button>
+          </Link>
         </div>
       </div>
     </main>

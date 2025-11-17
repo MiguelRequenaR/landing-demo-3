@@ -21,8 +21,8 @@ export default function NavBar() {
     <header className="bg-white fixed top-0 left-0 right-0 w-full z-50">
       <div className="max-w-7xl mx-auto flex justify-between items-center py-5 px-4 md:px-0">
         <div>
-          <a href="/" 
-          className="flex items-center gap-2">
+          <a href="/"
+            className="flex items-center gap-2">
             <img src="/logoOZP.png" alt="logo" className="w-10 h-10" />
             <h1
               className="text-2xl font-extralight text-primary">Oz Resort</h1>
@@ -48,25 +48,24 @@ export default function NavBar() {
               ))}
             </ul>
           </nav>
-          <Link to="/contacto">
-            <button
-              className="relative overflow-hidden bg-transparent px-6 py-2 uppercase cursor-pointer border border-primary group transition-colors rounded-full duration-500 hover:text-white text-sm text-primary"
-            >
-              <span
-                className="
+          <Link to="/contacto"
+
+            className="relative overflow-hidden bg-transparent px-6 py-2 uppercase cursor-pointer border border-primary group transition-colors rounded-full duration-500 hover:text-white text-sm text-primary"
+          >
+            <span
+              className="
                   absolute inset-0 
                   bg-primary
                   translate-y-full
                   group-hover:translate-y-0
                   transition-transform duration-500 ease-in-out pointer-events-none
                 "
-              />
-              <span
-                className="relative z-10 transition-colors duration-500"
-              >
-                Contáctanos
-              </span>
-            </button>
+            />
+            <span
+              className="relative z-10 transition-colors duration-500"
+            >
+              Contáctanos
+            </span>
           </Link>
         </div>
         <button
@@ -118,26 +117,24 @@ export default function NavBar() {
           </ul>
         </nav>
         <div className="flex justify-center pb-8">
-          <Link to="/contacto">
-            <button
-              className="relative overflow-hidden bg-secondary px-8 py-3 uppercase cursor-pointer border border-secondary group transition-colors duration-500 hover:text-white text-base rounded-full text-primary"
-              onClick={() => setMenuOpen(false)}
-            >
-              <span
-                className="
+          <Link to="/contacto"
+            className="relative overflow-hidden bg-secondary px-8 py-3 uppercase cursor-pointer border border-secondary group transition-colors duration-500 hover:text-white text-base rounded-full text-primary"
+            onClick={() => setMenuOpen(false)}
+          >
+            <span
+              className="
                   absolute inset-0 
                   bg-primary
                   translate-y-full
                   group-hover:translate-y-0
                   transition-transform duration-500 ease-in-out pointer-events-none
                 "
-              />
-              <span
-                className="relative z-10 transition-colors duration-500"
-              >
-                Contáctanos
-              </span>
-            </button>
+            />
+            <span
+              className="relative z-10 transition-colors duration-500"
+            >
+              Contáctanos
+            </span>
           </Link>
         </div>
       </div>

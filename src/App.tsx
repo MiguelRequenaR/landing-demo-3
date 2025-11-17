@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom"
 import MainLayout from "@/layout/MainLayout"
 import Home from "@/features/home"
 import Rooms from "@/features/rooms"
+import RoomDetail from "@/features/rooms/components/RoomDetail"
 import Contact from "@/features/contact"
 import ScrollToTop from "@/utils/ScrollToTop"
 import AOS from 'aos'
@@ -26,6 +27,7 @@ function App() {
         <Route path="/" element={<MainLayout />}>
           <Route index element={<Home />} />
           <Route path="/habitaciones" element={<Rooms />} />
+          <Route path="/habitaciones/:slug" element={<RoomDetail />} />
           <Route path="/contacto" element={<Contact />} />
         </Route>
       </Routes>
