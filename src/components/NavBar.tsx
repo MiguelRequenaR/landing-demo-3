@@ -1,9 +1,10 @@
 import { useState } from "react"
 import { Menu, X } from "lucide-react"
+import { Link, useLocation } from "react-router-dom"
 
 export default function NavBar() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [activeIndex, setActiveIndex] = useState(0);
+  const location = useLocation();
 
   const links = [
     {
@@ -27,39 +28,42 @@ export default function NavBar() {
         <div className="hidden md:flex items-center gap-12">
           <nav>
             <ul className="text-gray-600 flex gap-20 font-semibold">
-              {links.map((link, idx) => (
-                <li
-                  key={link.href}
-                  className={`
-                    transition-colors duration-500 cursor-pointer
-                    hover:underline underline-offset-8 decoration-primary
-                    ${activeIndex === idx ? 'text-primary' : ''}
-                  `}
-                  onClick={() => setActiveIndex(idx)}
-                >
-                  {link.label}
-                </li>
+              {links.map((link) => (
+                 <li key={link.href}>
+                 <Link
+                   to={link.href}
+                   className={`
+                     transition-colors duration-500 cursor-pointer
+                     hover:underline underline-offset-8 decoration-primary font-light
+                     ${location.pathname === link.href ? 'text-primary font-light' : ''}
+                   `}
+                 >
+                   {link.label}
+                 </Link>
+               </li>
               ))}
             </ul>
           </nav>
-          <button
-            className="relative overflow-hidden bg-transparent px-6 py-2 uppercase cursor-pointer border border-primary group transition-colors rounded-full duration-500 hover:text-white text-sm text-primary"
-          >
-            <span
-              className="
-                absolute inset-0 
-                bg-primary
-                translate-y-full
-                group-hover:translate-y-0
-                transition-transform duration-500 ease-in-out pointer-events-none
-              "
-            />
-            <span 
-              className="relative z-10 transition-colors duration-500"
+          <Link to="/contacto">
+            <button
+              className="relative overflow-hidden bg-transparent px-6 py-2 uppercase cursor-pointer border border-primary group transition-colors rounded-full duration-500 hover:text-white text-sm text-primary"
             >
-              Contáctanos
-            </span>
-          </button>
+              <span
+                className="
+                  absolute inset-0 
+                  bg-primary
+                  translate-y-full
+                  group-hover:translate-y-0
+                  transition-transform duration-500 ease-in-out pointer-events-none
+                "
+              />
+              <span 
+                className="relative z-10 transition-colors duration-500"
+              >
+                Contáctanos
+              </span>
+            </button>
+          </Link>
         </div>
         <button
           className="md:hidden flex items-center justify-center text-gray-800 hover:text-primary transition-colors"
@@ -91,45 +95,46 @@ export default function NavBar() {
         </div>
         {/* Mobile nav */}
         <nav className="flex-1 flex flex-col items-center justify-center">
-          <ul className="flex flex-col gap-8 text-white text-2xl font-semibold">
-            {links.map((link, idx) => (
-              <li
-                key={link.href}
+          <ul className="flex flex-col gap-8 text-white text-2xl font-extralight">
+            {links.map((link) => (
+              <li key={link.href}>
+              <Link
+                to={link.href}
                 className={`
                   cursor-pointer transition-colors duration-300
                   hover:text-secondary 
-                  ${activeIndex === idx ? 'text-secondary' : ''}
+                  ${location.pathname === link.href ? 'text-secondary' : ''}
                 `}
-                onClick={() => {
-                  setActiveIndex(idx);
-                  setMenuOpen(false);
-                }}
+                onClick={() => setMenuOpen(false)}
               >
                 {link.label}
-              </li>
+              </Link>
+            </li>
             ))}
           </ul>
         </nav>
         <div className="flex justify-center pb-8">
-          <button
-            className="relative overflow-hidden bg-secondary px-8 py-3 uppercase cursor-pointer border border-secondary group transition-colors duration-500 hover:text-white text-base rounded-full text-primary"
-            onClick={() => setMenuOpen(false)}
-          >
-            <span
-              className="
-                absolute inset-0 
-                bg-primary
-                translate-y-full
-                group-hover:translate-y-0
-                transition-transform duration-500 ease-in-out pointer-events-none
-              "
-            />
-            <span
-              className="relative z-10 transition-colors duration-500"
+          <Link to="/contacto">
+            <button
+              className="relative overflow-hidden bg-secondary px-8 py-3 uppercase cursor-pointer border border-secondary group transition-colors duration-500 hover:text-white text-base rounded-full text-primary"
+              onClick={() => setMenuOpen(false)}
             >
-              Contáctanos
-            </span>
-          </button>
+              <span
+                className="
+                  absolute inset-0 
+                  bg-primary
+                  translate-y-full
+                  group-hover:translate-y-0
+                  transition-transform duration-500 ease-in-out pointer-events-none
+                "
+              />
+              <span
+                className="relative z-10 transition-colors duration-500"
+              >
+                Contáctanos
+              </span>
+            </button>
+          </Link>
         </div>
       </div>
     </header>

@@ -2,6 +2,9 @@ import { useEffect } from "react"
 import { Routes, Route } from "react-router-dom"
 import MainLayout from "@/layout/MainLayout"
 import Home from "@/features/home"
+import Rooms from "@/features/rooms"
+import Contact from "@/features/contact"
+import ScrollToTop from "@/utils/ScrollToTop"
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
@@ -17,11 +20,16 @@ function App() {
   })
 
   return (
-    <Routes>
-      <Route path="/" element={<MainLayout />}>
-        <Route index element={<Home />} />
-      </Route>
-    </Routes>
+    <>
+      <ScrollToTop />
+      <Routes>
+        <Route path="/" element={<MainLayout />}>
+          <Route index element={<Home />} />
+          <Route path="/habitaciones" element={<Rooms />} />
+          <Route path="/contacto" element={<Contact />} />
+        </Route>
+      </Routes>
+    </>
   )
 }
 
