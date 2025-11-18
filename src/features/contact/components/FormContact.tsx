@@ -26,7 +26,7 @@ export default function FormContact() {
                 <div data-aos="fade-up">
                   <label htmlFor="name">
                     <h3
-                      className="text-2xl text-primary font-light uppercase">Nombre</h3>
+                      className="text-xl md:text-2xl text-primary font-light uppercase">Nombre</h3>
                   </label>
                   <input
                     type="text"
@@ -38,7 +38,7 @@ export default function FormContact() {
                 <div data-aos="fade-up" data-aos-delay="100">
                   <label htmlFor="lastname">
                     <h3
-                      className="text-2xl text-primary font-light uppercase">Apellido</h3>
+                      className="text-xl md:text-2xl text-primary font-light uppercase">Apellido</h3>
                   </label>
                   <input
                     type="text"
@@ -50,7 +50,7 @@ export default function FormContact() {
               <div data-aos="fade-up" data-aos-delay="200">
                 <label htmlFor="email">
                   <h3
-                    className="text-2xl text-primary font-light uppercase">Email</h3>
+                    className="text-xl md:text-2xl text-primary font-light uppercase">Email</h3>
                 </label>
                 <input
                   type="text"
@@ -61,7 +61,7 @@ export default function FormContact() {
               <div data-aos="fade-up" data-aos-delay="300">
                 <label htmlFor="phone">
                   <h3
-                    className="text-2xl text-primary font-light uppercase">Teléfono</h3>
+                    className="text-xl md:text-2xl text-primary font-light uppercase">Teléfono</h3>
                 </label>
                 <input
                   type="text"
@@ -72,7 +72,7 @@ export default function FormContact() {
               <div data-aos="fade-up" data-aos-delay="400">
                 <label htmlFor="subject">
                   <h3
-                    className="text-2xl text-primary font-light uppercase">Asunto</h3>
+                    className="text-xl md:text-2xl text-primary font-light uppercase">Asunto</h3>
                 </label>
 
                 <textarea placeholder="Mensaje"
