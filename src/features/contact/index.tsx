@@ -1,11 +1,11 @@
 import FormContact from "./components/FormContact";
-import CallToActionContact from "./components/CallToActionContact";
+import CallToActionMap from "@/components/CallToActionMap";
 
 export default function index() {
   return (
     <main>
       <FormContact />
-      <CallToActionContact />
+      <CallToActionMap />
     </main>
   )
 }

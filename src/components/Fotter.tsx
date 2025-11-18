@@ -24,7 +24,7 @@ export default function Fotter() {
           </div>
           <h4
           className="text-white text-2xl md:text-4xl mt-30 text-center md:text-left" data-aos="fade-down" data-aos-delay="200">
-            Av. La Victoria 123, Lima, Perú
+            Av. del Mar 1234, Máncora, Perú
           </h4>
           <h2
           className="text-white text-2xl text-center md:text-left">Desarrollado por <a href="https://grobles.netlify.app" target="_blank" rel="noopener noreferrer" className="text-black hover:underline">Grobles Studio.</a></h2>

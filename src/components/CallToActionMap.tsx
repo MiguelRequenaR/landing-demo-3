@@ -1,9 +1,9 @@
 import { ArrowRight, MapPin } from "lucide-react"
 
-export default function CallToActionContact() {
+export default function CallToActionMap() {
   return (
     <section className="py-20 px-4 md:px-0 bg-white">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-15 items-center">
+      <div className="md:mx-30 grid grid-cols-1 md:grid-cols-2 gap-15 items-center">
         <div className="overflow-hidden shadow-lg" data-aos="fade-right">
           <img
             src="https://images.unsplash.com/photo-1584132967334-10e028bd69f7?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
