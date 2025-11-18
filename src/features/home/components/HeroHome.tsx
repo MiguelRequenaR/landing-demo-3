@@ -20,7 +20,7 @@ export default function HeroHome() {
     <main className="h-screen flex flex-col">
       <div
         className="h-1/2 flex flex-col md:flex-row justify-center items-center px-4 md:px-30">
-        <div className="md:w-2/3 space-y-5" data-aos="fade-right">
+        <div className="md:w-2/3 space-y-5 pt-20 md:pt-0" data-aos="fade-right">
           <h1
             className="text-4xl md:text-[60px] uppercase text-primary text-center md:text-left">
             Tu puerta al <br /> paraiso
