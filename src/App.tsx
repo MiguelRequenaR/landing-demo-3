@@ -29,7 +29,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path="/habitaciones" element={<Rooms />} />
           <Route path="/habitaciones/:slug" element={<RoomDetail />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/nosotros" element={<About />} />
           <Route path="/contacto" element={<Contact />} />
         </Route>
       </Routes>

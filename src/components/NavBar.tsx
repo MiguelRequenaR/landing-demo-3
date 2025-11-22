@@ -13,7 +13,7 @@ export default function NavBar() {
     },
     {
       label: "Nosotros",
-      href: "/about",
+      href: "/nosotros",
     },
     {
       label: "Habitaciones",
